@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "Register to vote in 2012"
   s.description = "Because together we can make democracy actually work"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["Rakefile"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.8"
