@@ -15,7 +15,7 @@ describe RegisterController do
 
     it "should redirect to registration form for the state" do
       get :index, :state => "CA"
-      response.should redirect_to register_new_path("CA")
+      response.should redirect_to vote.register_new_path("CA")
     end
   end
 

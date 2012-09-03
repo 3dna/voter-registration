@@ -2,7 +2,7 @@ require 'prawn-fillform'
 
 class RegistrationPdf < Prawn::Document
   def initialize(register, state_info, view)
-    filename = "#{Rails.root}/public/nvra-en.pdf"
+    filename = "#{VoterRegistration::Engine.root}/public/nvra-en.pdf"
     super(:template => filename)
 
     font("Helvetica", :size=> 10)

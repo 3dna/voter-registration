@@ -1,0 +1,487 @@
+@red:           #6688BB;
+@grey:          #283744;
+@greyLight:     #7B8784;
+@tan:           #F3EfE0;
+@beige:         #FAF9F5;
+@beigeLight:    #F8F5EB;
+@blueDark:      #4574BA;
+@blue:          #6688BB;
+@blueLight:     #6699CC;
+
+
+@import "twitter/bootstrap/bootstrap";
+body {
+  padding-top: 60px !important;
+}
+
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
+@iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+// Note: If you use asset_path() here, your compiled boostrap_and_overrides.css will not
+//       have the proper paths. So for now we use the absolute path.
+//@fontAwesomeEotPath: '/assets/fontawesome-webfont.eot';
+//@fontAwesomeWoffPath: '/assets/fontawesome-webfont.woff';
+//@fontAwesomeTtfPath: '/assets/fontawesome-webfont.ttf';
+//@fontAwesomeSvgPath: '/assets/fontawesome-webfont.svg';
+
+// Font Awesome
+//@import "fontawesome";
+
+//@import "variables";
+body {
+  margin: 0;
+  font-family: 'Crimson Text', "Times New Roman", Times, serif;
+  font-size: 17px;
+  line-height: 1.3em;
+  color: @grey;
+  background-color: @beige;
+}
+
+@linkColor: @blueDark;
+@dropdownLinkColor: @blueDark;
+
+.nav-list > .active > a,
+.nav-list > .active > a:hover {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  background-color: @blueDark;
+}
+
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover {
+  color: #ffffff;
+  background-color: @blueDark;
+}
+
+.nav-tabs .dropdown-toggle .caret,
+.nav-pills .dropdown-toggle .caret {
+  border-top-color: @blueDark;
+  border-bottom-color: @blueDark;
+  margin-top: 6px;
+}
+.navbar-inner {
+  min-height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff !important;
+  background-repeat: repeat-x;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
+  border-bottom: 3px solid @beigeLight;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.25), 0 0 0 rgba(0, 0, 0, 0.1) inset;
+}
+
+.navbar {
+  color: @grey;
+}
+
+@navbarBrandColor: @grey;
+@navbarLinkColor: @blueDark;
+
+.navbar .brand {
+  font-weight: bold;
+  line-height: 1em;
+  padding: 10px 10px;
+  padding: 15px 10px 5px \0;
+}
+
+.navbar .nav > li > a {
+  float: none;
+  padding: 9px 10px 11px;
+  line-height: 19px;
+  color: @blueDark;
+  text-decoration: none;
+}
+.navbar .nav > li > a:hover {
+  background-color: transparent;
+  color: #c50001;
+  text-decoration: none;
+}
+
+.navbar .nav > li > a:hover {
+  background-color: transparent;
+  color: #c50001;
+  text-decoration: none;
+}
+
+@navbarLinkBackgroundActive: @beige;
+
+.navbar .divider-vertical {
+  height: 40px;
+  width: 1px;
+  margin: 0 9px;
+  overflow: hidden;
+  background-color: @beige;
+  border-right: 1px solid @beige;
+}
+
+.hero-unit {
+  margin-top: 50px;
+  padding: 20px 45px 30px;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.well,
+.hero-unit {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #D4D4D4;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 2em;
+  color: @grey;
+}
+.navbar .nav > li.active > a,
+.navbar .open .dropdown-toggle {
+  color: @greyLight;
+}
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active.open > .dropdown-toggle {
+  color: @greyLight;
+}
+.navbar .nav li.dropdown .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open .caret {
+  border-top-color: @blueDark;
+  opacity: 1;
+}
+
+.navbar .nav-collapse.in .nav li > a {
+  color: @blueDark;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  font-weight: normal;
+}
+nav-tabs li.active > a,
+.nav-tabs li.active > a:hover {
+  color: @grey;
+  background-color: @beige;
+}
+.nav-pills li > a:hover {
+  background-color: @beige;
+}
+.nav-pills li.active > a,
+.nav-pills li.active > a:hover {
+  color: @grey;
+  background-color: @beige;
+}
+.nav-pills .open .dropdown-toggle {
+  background-color: transparent;
+  color: @blueDark;
+  border-left: 1px solid whiteSmoke;
+  border-right: 1px solid #E5E5E5;
+}
+.nav-pills li.dropdown.open .dropdown-toggle .caret {
+  border-top-color: @blueDark;
+}
+.nav-list li.active > a,
+.nav-list li.active > a:hover {
+  color: @grey;
+}
+.pagination li.active > a:hover {
+  color: @grey;
+  background-color: #F5F5F5;
+}
+div.subnav {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+      font-size: 15px;
+
+  background-color: @tan;
+  background-image: none;
+}
+div.subnav .nav {
+  padding: 0;
+}
+div.subnav .nav > li.active > a,
+div.subnav .nav > li:active > a {
+  color: @greyLight;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: @beige;
+}
+div.subnav .nav > li > a:hover,
+div.subnav .nav > li.active > a:hover,
+div.subnav .nav > li:active > a:hover {
+  color: #c50001;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+div.subnav-fixed {
+  left: auto;
+  width: 100%;
+  margin: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #E5E5E5;
+}
+div.subnav-fixed .nav {
+    margin: 0 auto;
+    padding: 0 1px;
+    width: 938px;
+}
+
+
+.navbar .nav-collapse.in .nav li > a {
+  color: @blueDark;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  font-weight: normal;
+}
+.nav-tabs li.active > a,
+.nav-tabs li.active > a:hover {
+  color: @grey;
+  background-color: @beige;
+}
+.nav-pills li > a:hover {
+  background-color: @beige;
+}
+.nav-pills li.active > a,
+.nav-pills li.active > a:hover {
+  color: @grey;
+  background-color: @beige;
+}
+.nav-pills .open .dropdown-toggle {
+  background-color: transparent;
+  color: @blueDark;
+  border-left: 1px solid whiteSmoke;
+  border-right: 1px solid #E5E5E5;
+}
+.nav-pills li.dropdown.open .dropdown-toggle .caret {
+  border-top-color: @blueDark;
+}
+.nav-list li.active > a,
+.nav-list li.active > a:hover {
+  color: @grey;
+}
+.pagination li.active > a:hover {
+  color: @grey;
+  background-color: #F5F5F5;
+}
+.btn-primary {
+  background-color: @blueDark;
+  background-image: -moz-linear-gradient(top, @blue, @blueDark);
+  background-image: -ms-linear-gradient(top, @blue, @blueDark);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@blue), to(@blueDark));
+  background-image: -webkit-linear-gradient(top, @blue, @blueDark);
+  background-image: -o-linear-gradient(top, @blue, @blueDark);
+  background-image: linear-gradient(top, @blue, @blueDark);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cf0001', endColorstr='@blueDark', GradientType=0);
+  border-color: @blueDark @blueDark @blue;
+  *background-color: @blueDark;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  background-color: @blueDark;
+  *background-color: @blueDark;
+}
+.btn-primary:active,
+.btn-primary.active {
+  background-color: @blueDark;
+}
+.btn-primary[disabled] {
+  background-color: @blueDark;
+  *background-color: @blueDark;
+}
+.btn-primary:active,
+.btn-primary.active {
+  background-color: @blueDark;
+}
+input,
+textarea,
+select {
+  color: @grey;
+}
+
+.modal-footer {
+  background-color: @beige;
+}
+label,
+input,
+button,
+select,
+textarea {
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 1.3em;
+}
+input,
+button,
+select,
+textarea {
+  font-family: 'Crimson Text', "Times New Roman", Times, serif;
+}
+
+.nav-list > .active > a,
+.nav-list > .active > a:hover {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  background-color: @tan;
+}
+
+/* Sidenav for Docs
+-------------------------------------------------- */
+
+/* prevent column from collapsing when affixing */
+.span3 {
+  min-height: 1px;
+}
+
+.sidenav {
+  width: 228px;
+  margin: 30px 0 0;
+  padding: 0;
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+.sidenav > li > a {
+  display: block;
+  *width: 190px;
+  margin: 0 0 -1px;
+  padding: 8px 14px;
+  border: 1px solid #e5e5e5;
+}
+.sidenav > li:first-child > a {
+  -webkit-border-radius: 6px 6px 0 0;
+     -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+}
+.sidenav > li:last-child > a {
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+}
+.sidenav > .active > a {
+  position: relative;
+  z-index: 2;
+  padding: 9px 15px;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+}
+/* Chevrons */
+.sidenav .icon-chevron-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .25;
+}
+.sidenav > li > a:hover {
+  background-color: @beige;
+}
+.sidenav a:hover .icon-chevron-right {
+  opacity: .5;
+}
+.sidenav .active .icon-chevron-right,
+.sidenav .active a:hover .icon-chevron-right {
+  background-image: url(@iconSpritePath);
+  opacity: 1;
+}
+.sidenav.affix {
+  top: 40px;
+}
+.sidenav.affix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 270px;
+}
+
+/* Responsive
+-------------------------------------------------- */
+
+/* Desktop large
+------------------------- */
+@media (min-width: 1200px) {
+  .sidenav {
+    width: 258px;
+  }
+}
+
+/* Desktop
+------------------------- */
+@media (max-width: 980px) {
+  /* When affixed, space properly */
+  .sidenav {
+    top: 0;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+}
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 980px) {
+  /* Adjust sidenav width */
+  .sidenav {
+    width: 166px;
+    margin-top: 20px;
+  }
+  .sidenav.affix {
+    top: 0;
+  }
+}
+
+/* Tablet
+------------------------- */
+@media (max-width: 768px) {
+  /* Sidenav */
+  .sidenav {
+    width: auto;
+    margin-bottom: 20px;
+  }
+  .sidenav.affix {
+    position: static;
+    width: auto;
+    top: 0;
+  }
+}
+

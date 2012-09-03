@@ -1,3 +1,34 @@
+##NOTE:
+This is NationBuilder's "Engine" branch of this voter registration app. You can install this as a plugin to any Rails 3+ application.
+
+Here's how:
+
+1. Add to your Gemfile:
+
+    gem 'voter_registration', :git => 'https://github.com/3dna/voter-registration.git'
+    
+Then 'bundle install'
+
+2. Install the migrations:
+
+    rake voter_registration:install:migrations
+
+Then of course run:
+
+    rake db:migrate
+
+3. Modify your routes file to mount the engine:
+
+    MyApp::Application.routes.draw do
+      mount VoterRegistration::Engine => "/register"
+    end
+
+4. Bootstrap the database with required data. Run:
+
+    rake load_voter_registration:all
+
+That should be it! On with the original instructions (NOT updated for the engine version, but kept here for completeness)
+
 #Voter Registration
 
 ##About

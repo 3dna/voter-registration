@@ -1,20 +1,18 @@
-VoterRegistration::Application.routes.draw do
+VoterRegistration::Engine.routes.draw do
+  
+  #scope :module => :voter_registration do
+    resources :guidelines, :only => [:index,:show], :as => 'guidelines'
 
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-  devise_for :admins, :path => "authmin", :skip => :registrations #Used because rails_admin uses /admin
+    match '/register', :to => 'register#index', :as => 'register_index'
+    post '/register/:state', :to => 'register#create', :as => 'register_create'
+    match '/register/:state', :to => 'register#new', :as => 'register_new'
+    match '/register/:state/complete', :to => 'register#complete', :as => 'register_complete'
 
-  resources :guidelines, :only => [:index,:show]
+    match '/auth/:provider/callback', to: 'sessions#create'
+    match '/auth/failure', to: 'sessions#error'
 
-  match '/register', :to => 'register#index', :as => 'register_index'
-  post '/register/:state', :to => 'register#create', :as => 'register_create'
-  match '/register/:state', :to => 'register#new', :as => 'register_new'
-  match '/register/:state/complete', :to => 'register#complete', :as => 'register_complete'
+    match '/:id' => 'high_voltage/pages#show', :as => :static, :via => :get
 
-  match '/auth/:provider/callback', to: 'sessions#create'
-  match '/auth/failure', to: 'sessions#error'
-
-  match '/:id' => 'high_voltage/pages#show', :as => :static, :via => :get
-
-  root :to => 'home#index'
-
+    root :to => 'home#index'
+  #end
 end

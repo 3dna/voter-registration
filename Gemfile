@@ -1,43 +1,17 @@
-source 'https://rubygems.org'
-ruby '1.9.3'
+source "http://rubygems.org"
 
-gem 'rails', '3.2.8'
+# Declare your gem's dependencies in voter_registration.gemspec.
+# Bundler will treat runtime dependencies like base dependencies, and
+# development dependencies will be added by default to the :development group.
+gemspec
 
-gem 'active_attr'
-gem 'devise'
-gem 'encrypted-cookie-store'
-gem 'high_voltage'
-gem 'jquery-rails'
-gem 'omniauth', '~> 1.1.0'
-gem 'omniauth-twitter'
-gem 'prawn'
-gem 'prawn-fillform'
-gem 'rails_admin', '~> 0.0.5'
-gem 'simple_form'
+# jquery-rails is used by the dummy application
+gem "jquery-rails"
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'less-rails', '~> 2.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'therubyracer'
-  gem 'twitter-bootstrap-rails'
-end
+# Declare any dependencies that are still in development here instead of in
+# your gemspec. These might include edge Rails or gems from your path or
+# Git. Remember to move these dependencies to your gemspec before releasing
+# your gem to rubygems.org.
 
-group :test, :development do
-  gem 'rspec-rails', '~> 2.0'
-  gem 'sqlite3'
-  gem 'faker'
-  gem 'factory_girl_rails', '~> 4.0'
-end
-
-group :test do
-  gem 'simplecov', :require => false
-end
-
-group :production do
-  gem 'pg', '0.14.0'
-  gem 'puma'
-end
-
+# To use debugger
+# gem 'debugger'
