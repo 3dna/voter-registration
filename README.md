@@ -11,7 +11,7 @@ Here's how:
 
 2.  Install the migrations:
 
-        rake voter_registration:install:migrations
+        rake voter:install:migrations
 
     Then of course run:
 
